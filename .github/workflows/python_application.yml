@@ -17,4 +17,4 @@ jobs:
       - name: Cat
         run: cat test.txt
       - name: Type
-        run: python cek_type --obj ${{ vars.TOKEN }}
+        run: python cek_type.py --obj ${{ vars.TOKEN }}
