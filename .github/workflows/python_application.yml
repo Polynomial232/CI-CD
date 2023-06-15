@@ -13,4 +13,6 @@ jobs:
     steps:
       - name: Run Echo
         run: |
-          echo ${{ secrets.IP }}
+          echo ${{ secrets.IP }} >> test.txt
+      - name: Cat
+        run: cat test.txt
