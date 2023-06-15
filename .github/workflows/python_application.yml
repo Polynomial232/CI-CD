@@ -13,6 +13,6 @@ jobs:
     steps:
       - name: Run Echo
         run: |
-          echo ${{ secrets.IP }} >> test.txt
+          echo ${{ env.token }} >> test.txt
       - name: Cat
         run: cat test.txt
