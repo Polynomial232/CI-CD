@@ -13,6 +13,6 @@ jobs:
     steps:
       - name: Run Echo
         run: |
-          echo ${{ env.TOKEN }} >> test.txt
+          echo ${{ vars.TOKEN }} >> test.txt
       - name: Cat
         run: cat test.txt
