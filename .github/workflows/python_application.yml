@@ -11,10 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run Echo
-        run: |
-          echo ${{ vars.TOKEN }} >> test.txt
-      - name: Cat
-        run: cat test.txt
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
       - name: Type
-        run: python cek_type.py --obj ${{ vars.TOKEN }}
+        run: python3.8 cek_type.py --obj ${{ vars.TOKEN }}
